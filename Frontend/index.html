@@ -3,25 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ASCII Art Generator</title>
+
     <link rel="stylesheet" href="style.css">
-    <title>Ascii_art_by_me</title>
 </head>
-<body class="bg">
-    <div>
-        <div class="for-first-container line">
-            <h1 class="header-text">Ascii Art</h1>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">&lt;/&gt;</div>
+
+            <div>
+                <h1>ASCII</h1>
+                <span>ART GENERATOR</span>
+            </div>
         </div>
-        <div class="for-second-container line">
-            <pre>Ascii_text</pre>
+
+        <div class="sidebar-section">
+            <p class="section-label">PROJECT</p>
+
+            <nav>
+                <a href="#" class="nav-item active">
+                    <span>▦</span>
+                    Generator
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span>⌘</span>
+                    About
+                </a>
+            </nav>
         </div>
-        <div class="for-third-container">
-            <button>History</button>
-            <button>color</button>
-            <button>align</button>
-            <button>font</button>
-            <input type ="text" placeholder="Type">
-            <button>generate</button>
+
+        <div class="sidebar-bottom">
+            <div class="status">
+                <span class="status-dot"></span>
+                System ready
+            </div>
         </div>
-    </div>
+
+    </aside>
+
+
+    <!-- Main content -->
+    <main class="main">
+
+        <!-- Header -->
+        <header class="topbar">
+
+            <div>
+                <p class="eyebrow">ASCII TOOLKIT</p>
+                <h2>Generate something.</h2>
+            </div>
+
+            <div class="header-actions">
+                <button class="icon-button" id="clearBtn" title="Clear">
+                    ⌫
+                </button>
+
+                <button class="github-button">
+                    GitHub
+                    <span>↗</span>
+                </button>
+            </div>
+
+        </header>
+
+
+        <!-- Workspace -->
+        <section class="workspace">
+
+            <!-- Input panel -->
+            <div class="panel input-panel">
+
+                <div class="panel-header">
+                    <div>
+                        <p class="panel-number">01</p>
+                        <h3>Input</h3>
+                    </div>
+
+                    <span class="panel-description">
+                        Enter your text
+                    </span>
+                </div>
+
+
+                <div class="input-wrapper">
+
+                    <label for="textInput">
+                        YOUR TEXT
+                    </label>
+
+                    <textarea
+                        id="textInput"
+                        placeholder="Type something..."
+                        maxlength="100"
+                    ></textarea>
+
+                    <div class="input-footer">
+                        <span id="characterCount">0 / 100</span>
+
+                        <button id="generateBtn" class="generate-button">
+                            Generate
+                            <span>→</span>
+                        </button>
+                    </div>
+
+                </div>
+
+
+                <!-- Options -->
+                <div class="options">
+
+                    <div class="option">
+
+                        <label for="fontSelect">
+                            FONT
+                        </label>
+
+                        <select id="fontSelect">
+                            <option value="standard">Standard</option>
+                            <option value="shadow">Shadow</option>
+                            <option value="thinkertoy">Thinkertoy</option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="option">
+
+                        <label for="alignSelect">
+                            ALIGNMENT
+                        </label>
+
+                        <select id="alignSelect">
+                            <option value="left">Left</option>
+                            <option value="center">Center</option>
+                            <option value="right">Right</option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="option">
+
+                        <label for="colorSelect">
+                            COLOR
+                        </label>
+
+                        <select id="colorSelect">
+                            <option value="white">White</option>
+                            <option value="gray">Gray</option>
+                            <option value="green">Green</option>
+                            <option value="blue">Blue</option>
+                            <option value="red">Red</option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="option reverse-option">
+
+                        <label for="reverseToggle">
+                            REVERSE
+                        </label>
+
+                        <label class="switch">
+                            <input
+                                type="checkbox"
+                                id="reverseToggle"
+                            >
+
+                            <span class="slider"></span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Output panel -->
+            <div class="panel output-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <p class="panel-number">02</p>
+                        <h3>Output</h3>
+                    </div>
+
+                    <button id="copyBtn" class="copy-button">
+                        Copy
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="output"
+                    class="ascii-output"
+                >
+                    <div class="empty-state">
+
+                        <div class="empty-icon">
+                            _
+                        </div>
+
+                        <h4>Your ASCII art will appear here</h4>
+
+                        <p>
+                            Enter text on the left and click
+                            <strong>Generate</strong>.
+                        </p>
+
+                    </div>
+                </div>
+
+
+                <div class="output-footer">
+
+                    <span>
+                        OUTPUT
+                    </span>
+
+                    <span id="outputStatus">
+                        Waiting for input
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+
+            <span>
+                ASCII Art Generator
+            </span>
+
+            <span>
+                Built with HTML · CSS · JavaScript
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<div id="toast" class="toast">
+    Copied to clipboard
+</div>
+
+
+<script src="script.js"></script>
+
 </body>
 </html>
