@@ -152,19 +152,14 @@
 
 
                     <div class="option">
-
-                        <label for="colorSelect">
-                            COLOR
+                        <label for="fontSelect">
+                            text-color:
                         </label>
-
-                        <select id="colorSelect">
-                            <option value="white">White</option>
-                            <option value="gray">Gray</option>
-                            <option value="green">Green</option>
-                            <option value="blue">Blue</option>
-                            <option value="red">Red</option>
-                        </select>
-
+                        <input type="color" id="colorPicker">
+                        <label for="fontSelect">
+                            background-color:
+                        </label>
+                        <input type="color" id="colorPickerBG">
                     </div>
 
 
@@ -207,23 +202,15 @@
                 </div>
 
 
-                <div
-                    id="output"
-                    class="ascii-output"
-                >
+                <div id="output" class="ascii-output">
                     <div class="empty-state">
-
                         <div class="empty-icon">
                             _
                         </div>
-
                         <h4>Your ASCII art will appear here</h4>
-
-                        <p>
-                            Enter text on the left and click
+                        <p>Enter text on the left and click
                             <strong>Generate</strong>.
                         </p>
-
                     </div>
                 </div>
 
@@ -268,7 +255,7 @@
 </div>
 
 
-<script src="script.js"></script>
+<script src="script.js?v=2"></script>
 
 </body>
 </html>

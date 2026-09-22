@@ -637,7 +637,6 @@ textarea:focus {
     background: var(--surface-light);
 }
 
-
 .ascii-output {
     flex: 1;
 
@@ -645,7 +644,7 @@ textarea:focus {
 
     overflow: auto;
 
-    background: #1E1E1E;
+    background : #1E1E1E;
 
     margin: 20px;
 
@@ -653,9 +652,27 @@ textarea:focus {
 
     border-radius: 7px;
 
-    display: flex;
+    display: block;
+
+    min-width: 0;
 }
 
+.ascii-text {
+    margin: 0;
+
+    white-space: pre-wrap;
+
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 1.2;
+
+    color: var(--white);
+
+    overflow-x: auto;
+    overflow-y: auto;
+
+    max-width: 100%;
+}
 
 .empty-state {
     margin: auto;
@@ -704,21 +721,39 @@ textarea:focus {
 }
 
 
-#asciiText {
-    margin: 0;
+@media (max-width: 700px) {
 
-    width: 100%;
+    .sidebar {
+        display: none;
+    }
 
-    white-space: pre;
+    .main {
+        padding: 20px;
+    }
 
-    font-family: "Courier New", monospace;
+    .topbar {
+        align-items: flex-start;
+    }
 
-    font-size: 13px;
+    .topbar h2 {
+        font-size: 28px;
+    }
 
-    line-height: 1.15;
+    .github-button {
+        display: none;
+    }
 
-    color: #FFFFFF;
+    .options {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 5px;
+    }
+
 }
+
 
 
 .output-footer {
@@ -845,8 +880,6 @@ footer {
         min-height: 450px;
     }
 }
-
-
 @media (max-width: 700px) {
 
     .sidebar {
@@ -877,4 +910,5 @@ footer {
         flex-direction: column;
         gap: 5px;
     }
+
 }
