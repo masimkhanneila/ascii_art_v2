@@ -32,7 +32,7 @@ Each character in the banner files is represented by 8 lines of ASCII characters
 Run the program with:
 
 ```bash
-python3 main.py
+python3 ascii_art.py
 
 ```
 
@@ -56,3 +56,4 @@ Working with nested loops
 Functions
 Handling user input
 Git and GitHub
+# ascii_art_v2
