@@ -92,7 +92,7 @@ colorPickerBG.addEventListener("input", () => {
 });
 async function gen_asc() {
     console.log("USER INPUT:", textInput.value);
-    const response = await fetch('http://localhost:8000/generate', {
+    const response = await fetch('/generate', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
